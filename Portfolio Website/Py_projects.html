@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Projects</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body class = "projects" id = "py">
+  <div class = "scroll" id = "progress_bar"></div>
+  <div class = "scroll" id ="path"></div>
+<h1> Python Projects</h1>
+<section class="project_list">
+
+    <div class="item">
+        <h2> AI Spam Filter </h2>
+        <div class ="button"><a class = "source" href = "https://github.com/Rak256/AI-Spam-Filter"><img src = "Github Logo/github-mark/github-mark-white.png">Github Link</a></div>
+        <img src = "Python Projects/AI spam Filter.png">
+        <p>AI spam detection program trained on the following dataset: https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset.</p>
+        <br>
+        <p>Created to counter financial fraud against the elderly via SMS.</p>
+    </div>
+    <div class="item">
+        <h2>Tic-Tac-Toe Game</h2>
+        <div class ="button"><a class = "source" href = "https://github.com/Rak256/Tic_Tac_Toe_Game"><img src = "Github Logo/github-mark/github-mark-white.png">Github Link</a></div>
+        <img src = "Python Projects/Tic Tac Toe.png">
+        <p>This program is a 2 player tic-tac-toe game. It takes coordinate input from the user and uses it to mark a spot on the list. The game ends when a player wins or if the game is a draw.</p>
+    </div>
+
+</section>
+<script>
+  function layout(){
+    item_list = document.querySelectorAll(".project_list .item");
+    capacity = item_list.length;
+    
+    for(k = 0; k < capacity; k++){
+      if (k%2 === 1){
+        item_list[k].style.background = "linear-gradient(to bottom, #0C0C0C,#481E14)";
+      }
+    }
+  }
+
+  layout();
+   //Progress bar code
+   function progress(){
+    let progress = document.querySelector("#progress_bar");
+    let exceeding_height = document.body.scrollHeight - window.innerHeight;
+    if (exceeding_height <= 0){
+        progress.style.height = 100 + "%";
+    }
+
+    else{
+        window.onscroll = function(){
+        let percent_covered = (window.pageYOffset*100)/exceeding_height;
+        progress.style.height = percent_covered + "%";}
+    }
+}
+    progress();
+
+    
+</script>
+</body>
+</html>

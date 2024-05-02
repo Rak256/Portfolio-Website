@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ projects</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body class = "projects" id = "c_plus">
+  <div class = "scroll" id = "progress_bar"></div>
+  <div class = "scroll" id ="path"></div>
+<h1> C++ Projects</h1>
+<section class="project_list">
+
+<div class="item">
+  
+  <h2> RGB Function Visualizer</h2>
+  <div class ="button"><a class = "source" href ="https://github.com/Rak256/RGB-Function-Visaulizer"><img src = "Github Logo/github-mark/github-mark-white.png">Github Link</a></div>
+  <img src = "C++ Projects/Circles.png">
+  <img src = "C++ Projects/Kind of Hyperbola.png">
+  <p>A Windows API program that represents mathematical functions as RGB colors</p>
+  <br>
+  <p>This program utilizes bitmap coloring and row-column manipulation of pixels to create a beautiful representation of an inputted mathematical expression .</p>
+</div>
+<div class="item">
+  <h2> Quadratic Graph Software</h2>
+  <div class ="button"><a class = "source" href = "https://github.com/Rak256/Quadratic-Graph"><img src = "Github Logo/github-mark/github-mark-white.png">Github Link</a></div>
+  <img src = "C++ Projects/polynomial roots.png">
+  <img src = "C++ Projects/Quadratic Graph.png">
+  <p>Finds the polynomial routes of a quadratic function and prints its approximate graph with ASCII characters</p>
+</div>
+
+<div class="item">
+  <h2> Sig_Fig Calculator</h2>
+  <div class ="button"><a class = "source" href = "https://github.com/Rak256/Sig_Fig_Calculator"><img src = "Github Logo/github-mark/github-mark-white.png">Github Link</a></div>
+  <img src = "C++ Projects/Sig_Fig Calculator.png">
+  <p>Sig Fig calculator that returns the quotient of a division with the correct significant figures. There is no floating point error.</p>
+</div>
+
+</section>
+<script>
+  function layout(){
+    item_list = document.querySelectorAll(".project_list .item");
+    capacity = item_list.length;
+    
+    for(k = 0; k < capacity; k++){
+      if (k%2 === 1){
+        item_list[k].style.background = "linear-gradient(to bottom, #0C0C0C,#481E14)";
+      }
+    }
+  }
+
+  layout();
+   //Progress bar code
+   function progress(){
+    let progress = document.querySelector("#progress_bar");
+    let exceeding_height = document.body.scrollHeight - window.innerHeight;
+    if (exceeding_height <= 0){
+        progress.style.height = 100 + "%";
+    }
+
+    else{
+        window.onscroll = function(){
+        let percent_covered = (window.pageYOffset*100)/exceeding_height;
+        progress.style.height = percent_covered + "%";}
+    }
+}
+    progress();
+
+    
+</script>
+</body>
+</html>
