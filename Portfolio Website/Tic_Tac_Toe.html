@@ -133,13 +133,16 @@ function change_board(player1, id){
         document.getElementById("clear_b").addEventListener("click", () => {
             let all_boxes = document.getElementById("board").getElementsByTagName("button");
             window.row1 = ["*", "*", "*"];
-            window.row1 = ["*", "*", "*"];
-            window.row1 = ["*", "*", "*"];
+            window.row2 = ["*", "*", "*"];
+            window.row3 = ["*", "*", "*"];
 
             for(k = 0; k < all_boxes.length; k++){
-                all_boxes[k].removeAttribute("marked");
+                all_boxes[k].removeAttribute("class");
                 all_boxes[k].innerHTML = "";
             }
+
+            window.end = false;
+            window.player1 = true;
 
             document.getElementById("message").innerHTML = "";
         });
