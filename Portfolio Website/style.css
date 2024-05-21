@@ -300,3 +300,15 @@ button:hover img{
     justify-content: center;
 }
 
+#board{
+ display: grid;
+ grid-template-columns: 100px 100px 100px;
+ grid-template-rows: 100px 100px 100px;
+
+ justify-content: center;
+}
+
+#game_header{
+    text-align: center;
+    font-size: 78px;
+}
