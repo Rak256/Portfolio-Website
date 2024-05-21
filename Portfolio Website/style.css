@@ -312,3 +312,20 @@ button:hover img{
     text-align: center;
     font-size: 78px;
 }
+
+#message{
+    display:flex;
+    justify-content: center;
+}
+
+#clear_b{
+    display:flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#clear_b button{
+    background-color: red;
+    font-size: 25px;
+}
+
